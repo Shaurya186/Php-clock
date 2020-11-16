@@ -1,0 +1,23 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="timestamp"></div>
+
+        <script>
+            $(document).ready(function() {
+    setInterval(timestamp, 1000);
+});
+
+function timestamp() {
+    $.ajax({
+        url: 'C:\Users\sonal\clock.php',
+        success: function(data) {
+            $('#timestamp').html(data);
+        },
+    });
+}
+            </script>
+    </body>
+</html>
